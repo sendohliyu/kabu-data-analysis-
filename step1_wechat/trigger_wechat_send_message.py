@@ -27,8 +27,6 @@ def mouse_click():
 
 # 实现消息的发送函数
 def send_message(number, string):
-    print("程序在五秒钟之后开始执行")
-    time.sleep(5)
     keyboard = key_cl()
 
     for i in range(number):
@@ -58,20 +56,12 @@ def find_person(keyboard):
     keyboard.release(Key.cmd.value)
 
 
-def enter_text(message, keyboard):
-    for ele in message:
-        keyboard.press(ele)
-        keyboard.release(ele)
-    keyboard.press(Key.enter)
-    keyboard.release(Key.enter)
-
-
 def send_message_one_row(row, keyboard):
     find_person(keyboard)
-    enter_text(row['person'], keyboard)
-    # find_person(keyboard)
-    enter_text(row['message'], keyboard)
-    # print(row['person'], row['message'])
+
+    send_message(1, row['person'])
+    time.sleep(1)
+    send_message(1, row['message'])
 
 
 def send_messages(df):
