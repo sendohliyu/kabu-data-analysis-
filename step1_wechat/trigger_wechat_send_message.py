@@ -65,6 +65,7 @@ def send_message_one_row(row, keyboard):
     time.sleep(0.5)
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
+    time.sleep(1)
 
 
 def send_messages(df):
@@ -85,8 +86,9 @@ if __name__ == '__main__':
     assert df.columns[0] == 'person'
     assert df.columns[1] == 'message'
     print("程序在五秒钟之后开始执行")
-    time.sleep(2)
+    time.sleep(5)
     send_messages(df)
+
 
     # print("程序在五秒钟之后开始执行")
     # time.sleep(5)
