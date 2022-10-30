@@ -62,6 +62,9 @@ def send_message_one_row(row, keyboard):
     send_message(1, row['person'])
     time.sleep(1)
     send_message(1, row['message'])
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
+    time.sleep(1)
 
 
 def send_messages(df):
@@ -84,6 +87,7 @@ if __name__ == '__main__':
     print("程序在五秒钟之后开始执行")
     time.sleep(2)
     send_messages(df)
+
 
     # print("程序在五秒钟之后开始执行")
     # time.sleep(5)
