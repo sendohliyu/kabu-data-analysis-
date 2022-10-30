@@ -1,9 +1,12 @@
-
-import time
-import os
-import sys
-import pandas as pd
+from pynput.mouse import Button, Controller as mou_cl  # 鼠标控制器
+from pynput.keyboard import Key, Controller as key_cl  # 键盘控制器
 from pynput.keyboard import Key, Controller
+import pandas as pd
+import sys
+import os
+import time
+
+# 键盘的控制函数
 
 
 def keyboard_input(string):
@@ -22,11 +25,14 @@ def mouse_click():
     mouse.release(Button.left)
 
 
-def send_message(number, message: str):
+# 实现消息的发送函数
+def send_message(number, string):
+    print("程序在五秒钟之后开始执行")
+    time.sleep(5)
     keyboard = key_cl()
 
     for i in range(number):
-        keyboard_input(message)
+        keyboard_input(string)
         mouse_click()
         time.sleep(0.3)
         keyboard.press(Key.enter)
