@@ -32,7 +32,7 @@ def send_message(number, string):
     for i in range(number):
         keyboard_input(string)
         mouse_click()
-        time.sleep(0.3)
+        time.sleep(0.4)
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
 
@@ -62,6 +62,9 @@ def send_message_one_row(row, keyboard):
     send_message(1, row['person'])
     time.sleep(1)
     send_message(1, row['message'])
+    time.sleep(0.5)
+    keyboard.press(Key.enter)
+    keyboard.release(Key.enter)
 
 
 def send_messages(df):
