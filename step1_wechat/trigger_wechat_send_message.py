@@ -31,10 +31,11 @@ def send_message(number, string):
 
     for i in range(number):
         keyboard_input(string)
-        mouse_click()
+        # mouse_click()
         time.sleep(0.4)
         keyboard.press(Key.enter)
         keyboard.release(Key.enter)
+        time.sleep(0.4)
 
 
 def check_message(file_name: str):
