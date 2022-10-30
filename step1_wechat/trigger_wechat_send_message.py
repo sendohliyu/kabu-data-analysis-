@@ -88,11 +88,3 @@ if __name__ == '__main__':
     print("程序在五秒钟之后开始执行")
     time.sleep(5)
     send_messages(df)
-
-
-    # print("程序在五秒钟之后开始执行")
-    # time.sleep(5)
-    # send_message(2, "Test")
-
-    # mouse = Controller()
-    # print('The current pointer position is {0}'.format(mouse.position))
