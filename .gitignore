@@ -151,3 +151,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .DS_Store
+*.csv
+step2_excel/2022.10.29-30_Orders.xlsx
+step1_wechat/message.csv
+step1_wechat/message.csv
