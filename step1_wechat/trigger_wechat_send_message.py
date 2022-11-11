@@ -86,6 +86,6 @@ if __name__ == '__main__':
     assert len(df.columns) == 2
     assert df.columns[0] == 'person'
     assert df.columns[1] == 'message'
-    print("程序在五秒钟之后开始执行")
-    time.sleep(5)
+    print("程序在3秒钟之后开始执行")
+    time.sleep(3)
     send_messages(df)
